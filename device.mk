@@ -140,7 +140,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     power.mt8163 \
     lights.mt8163 \
-    memtrack.mt8163 \
     power.mt8163
 
 # Graphic
