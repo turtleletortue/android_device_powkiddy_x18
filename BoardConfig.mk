@@ -199,4 +199,4 @@ BOARD_SEPOLICY_DIRS := \
 # Seccomp filter
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp
 
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+$(shell mkdir -p out/obj/KERNEL_OBJ/usr)
