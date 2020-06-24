@@ -1,4 +1,6 @@
-Twrp device tree for the Powkiddy X18
+Device tree for Powkiddy x18
+
+**PROBABLY DOESN'T WORK**
 
 
 

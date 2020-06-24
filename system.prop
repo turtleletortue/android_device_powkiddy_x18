@@ -203,4 +203,4 @@ dalvik.vm.isa.arm.features=default
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 import /custom/cip-build.prop
-ro.expect.recovery_id=0xbd21f1c79c0714fe4313c100863f3861c94bc9ee000000000000000000000000
+#ro.expect.recovery_id=0xbd21f1c79c0714fe4313c100863f3861c94bc9ee000000000000000000000000
