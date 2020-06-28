@@ -9,6 +9,9 @@ TARGET_PREBUILT_KERNEL := device/powkiddy/x18/kernel
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
+# Verity
+$(call inherit-product, $(SRC_TARGET_DIR)/product/verity.mk)
+
 # Bootimage stuff
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/fstab.mt8163:root/fstab.mt8163 \
@@ -192,6 +195,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.allow.mock.location=1 \
     ro.debuggable=1 \
     persist.service.adb.enable=1
+
+# Verity 
+PRODUCT_SUPPORTS_BOOT_SIGNER := true
+PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
 
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
