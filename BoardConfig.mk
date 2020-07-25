@@ -202,4 +202,4 @@ BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp
 
 
 
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+$(shell mkdir -p $(shell pwd)/out/target/product/x18/obj/KERNEL_OBJ/usr)
