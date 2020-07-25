@@ -13,7 +13,7 @@ TARGET_BOOTLOADER_BOARD_NAME := vWC200103
 TARGET_BOARD_PLATFORM := mt8163
 #mt8163b
 # For Mediatek Boot Image Headers
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 
 # Architecture
 TARGET_ARCH := arm64
@@ -38,7 +38,7 @@ TARGET_IS_64_BIT := true
 TARGET_PREBUILT_KERNEL := device/powkiddy/x18/kernel
 BOARD_MTK_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE := "bootopt=64S3,32N2,64N2 androidboot.selinux=permissive"
-BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --cmdline $(BOARD_KERNEL_CMDLINE)
+BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --cmdline $(BOARD_KERNEL_CMDLINE) --board "vWC200103"
 
 #Mediatek flags
 BOARD_HAS_MTK_HARDWARE := true
