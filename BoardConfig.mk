@@ -57,7 +57,6 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
 # Recovery
-TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 
@@ -174,7 +173,7 @@ LINKER_FORCED_SHIM_LIBS := \
 	/system/lib64/libgui_ext.so|libshim_ui.so
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.mt8163
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery.fstab
 #BOARD_HAS_NO_SELECT_BUTTON := true
 #TARGET_USERIMAGES_USE_EXT4 := true
 

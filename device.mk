@@ -1,41 +1,14 @@
 # Define local path
 LOCAL_PATH := device/powkiddy/x18
+CM_VENDOR := vendor/cm
 
 $(call inherit-product-if-exists, vendor/powkiddy/x18/x18-vendor.mk)
 
 # prebuilt kernel
 TARGET_PREBUILT_KERNEL := device/powkiddy/x18/kernel
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
 # Verity
 $(call inherit-product, $(SRC_TARGET_DIR)/product/verity.mk)
-
-# Bootimage stuff
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/fstab.mt8163:root/fstab.mt8163 \
-    $(LOCAL_PATH)/rootdir/init.recovery.mt8163.rc:root/init.recovery.mt8163.rc \
-    $(LOCAL_PATH)/rootdir/ueventd.mt8163.rc:root/ueventd.mt8163.rc \
-    $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
-    $(LOCAL_PATH)/rootdir/factory_init.connectivity.rc:root/factory_init.connectivity.rc \
-    $(LOCAL_PATH)/rootdir/factory_init.project.rc:root/factory_init.project.rc \
-    $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
-    $(LOCAL_PATH)/rootdir/init.aee.rc:root/init.aee.rc \
-    $(LOCAL_PATH)/rootdir/init.common_svc.rc:root/init.common_svc.rc \
-    $(LOCAL_PATH)/rootdir/init.connectivity.rc:root/init.connectivity.rc \
-    $(LOCAL_PATH)/rootdir/init.environ.rc:root/init.envirion.rc \
-    $(LOCAL_PATH)/rootdir/init.modem.rc:root/init.modem.rc \
-    $(LOCAL_PATH)/rootdir/init.mt8163.rc:root/init.mt8163.rc \
-    $(LOCAL_PATH)/rootdir/init.mt8163.usb.rc:root/init.mt8163.usb.rc \
-    $(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
-    $(LOCAL_PATH)/rootdir/init.rilproxy.rc:root/init.rilproxy.rc \
-    $(LOCAL_PATH)/rootdir/meta_init.connectivity.rc:root/meta_init.connectivity.rc \
-    $(LOCAL_PATH)/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
-    $(LOCAL_PATH)/rootdir/meta_init.project.rc:root/meta_init.project.rc \
-    $(LOCAL_PATH)/rootdir/meta_init.rc:root/meta_init.rc \
-    $(LOCAL_PATH)/rootdir/multi_init.rc:root/multi_init.rc 
-
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -181,8 +154,8 @@ PRODUCT_PACKAGES += \
     YGPS
 
 # Manage Serial
-PRODUCT_PACKAGES += \
-    manage_sn
+#PRODUCT_PACKAGES += \
+#    manage_sn
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -202,3 +175,4 @@ PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
 
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
