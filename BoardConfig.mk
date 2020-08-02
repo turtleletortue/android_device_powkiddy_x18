@@ -127,7 +127,6 @@ MTK_HWC_VERSION := 1.4.1
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
-TARGET_USES_OVERLAY := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
@@ -165,12 +164,19 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # Shims
 TARGET_LDPRELOAD += libmtk_symbols.so
 
-LINKER_FORCED_SHIM_LIBS := \
-	/system/vendor/lib/libwvm.so|libshim_wvm.so \
-	/system/lib/libui_ext.so|libshim_ui.so \
-	/system/lib64/libui_ext.so|libshim_ui.so \
-	/system/lib/libgui_ext.so|libshim_ui.so \
-	/system/lib64/libgui_ext.so|libshim_ui.so
+#LINKER_FORCED_SHIM_LIBS := \
+#	/system/vendor/lib/libwvm.so|libshim_wvm.so \
+#	/system/lib/libui_ext.so|libshim_ui.so \
+#	/system/lib64/libui_ext.so|libshim_ui.so \
+#	/system/lib/libgui_ext.so|libshim_ui.so \
+#	/system/lib64/libgui_ext.so|libshim_ui.so
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_MTK := true
+BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
+BOARD_BLUETOOTH_BDROID_HCILP_INCLUDED := 0
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/recovery.fstab
@@ -195,7 +201,8 @@ BOARD_SEPOLICY_DIRS := \
 # Seccomp filter
 BOARD_SECCOMP_POLICY += $(DEVICE_PATH)/seccomp
 
-
+# Headers
+TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 
 $(shell mkdir -p $(shell pwd)/out/target/product/x18/obj/KERNEL_OBJ/usr)
