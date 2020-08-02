@@ -173,7 +173,7 @@ LINKER_FORCED_SHIM_LIBS := \
 	/system/lib64/libgui_ext.so|libshim_ui.so
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/recovery.fstab
 #BOARD_HAS_NO_SELECT_BUTTON := true
 #TARGET_USERIMAGES_USE_EXT4 := true
 

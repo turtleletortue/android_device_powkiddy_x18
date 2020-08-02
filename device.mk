@@ -47,6 +47,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs_mediatek_video.xml:system/etc/media_codecs_mediatek_video.xml \
     $(LOCAL_PATH)/configs/media_codecs_mediatek_audio.xml:system/etc/media_codecs_mediatek_audio.xml
 
+# EGL cfg
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/configs/egl.cfg:system/vendor/lib/egl/egl.cfg
+
+# Recovery.fstab
+PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery/recovery.fstab:system/vendor/etc/recovery.fstab
+
 #Removed from media
 #     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
 
