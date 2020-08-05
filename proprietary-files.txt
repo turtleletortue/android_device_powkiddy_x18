@@ -102,14 +102,14 @@ vendor/lib64/libem_modem_jni.so
 vendor/lib64/libcam.utils.sensorlistener.so
 vendor/lib64/libvcodecdrv.so
 vendor/lib64/libstagefrighthw.so
-vendor/lib64/libui_ext.so
+#vendor/lib64/libui_ext.so
 vendor/lib64/libfeatureio.so
 vendor/lib64/libaudiocomponentengine.so
 vendor/lib64/egl/libGLES_mali.so
 vendor/lib64/libion_mtk.so
 vendor/lib64/libperfservicenative.so
 vendor/lib64/libem_gpio_jni.so
-vendor/lib64/libgui_ext.so
+#vendor/lib64/libgui_ext.so
 #lib64/libgralloc_extra.so
 vendor/lib64/mtk-ril.so
 vendor/lib64/libcam_utils.so
@@ -321,7 +321,7 @@ vendor/lib/libcam.utils.sensorlistener.so
 vendor/lib/libmp4enc_sa.ca7.so
 vendor/lib/libvcodecdrv.so
 vendor/lib/libstagefrighthw.so
-vendor/lib/libui_ext.so
+#vendor/lib/libui_ext.so
 vendor/lib/libfeatureio.so
 vendor/lib/libaudiocomponentengine.so
 vendor/lib/egl/libGLES_mali.so
@@ -329,7 +329,7 @@ vendor/lib/libion_mtk.so
 vendor/lib/libperfservicenative.so
 vendor/lib/libem_gpio_jni.so
 vendor/lib/libaudiomtkdcremoval.so
-vendor/lib/libgui_ext.so
+#vendor/lib/libgui_ext.so
 #lib/libgralloc_extra.so
 vendor/lib/libmtcloader.so
 vendor/lib/mtk-ril.so
@@ -497,3 +497,12 @@ vendor/lib/libpqservice.so
 vendor/lib64/libpqservice.so
 vendor/lib/libmtkcam_fwkutils.so
 vendor/lib64/libmtkcam_fwkutils.so
+
+# Round 2
+vendor/lib/libhwinfo.so
+vendor/lib64/libhwinfo.so
+vendor/lib/libhevce_sb.ca7.android.so
+vendor/lib/libcam.hal3a.v3.dng.so
+vendor/lib64/libcam.hal3a.v3.dng.so
+vendor/lib/libaudiotoolkit.so
+vendor/lib64/libaudiotoolkit.so

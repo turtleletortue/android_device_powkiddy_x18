@@ -152,9 +152,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libGLES_android \
     libgralloc_extra \
-    libperfservicenative
-# Removed libui_ext \
-# Removed     libgui_ext \
+    libperfservicenative \
+    libui_ext \
+    libgui_ext 
+
 # MTK Debugging
 PRODUCT_PACKAGES += \
     YGPS
