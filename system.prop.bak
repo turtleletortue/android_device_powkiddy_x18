@@ -75,8 +75,18 @@ jro.jlink.ext_ap=1;
 #
 # ADDITIONAL_BUILD_PROPERTIES
 #
+ro.product.first_api_level=24
+ro.config.ringtone=Ring_Synth_04.ogg
+ro.config.notification_sound=pixiedust.ogg
+ro.carrier=unknown
+ro.config.alarm_alert=Alarm_Classic.ogg
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
 ro.mediatek.chip_ver=S01
 ro.mediatek.platform=MT8163
+ro.telephony.sim.count=2
+persist.radio.default.sim=0
+persist.radio.multisim.config=ss
 ro.mtk_key_manager_kb_path=1
 ril.specific.sm_cause=0
 bgw.current3gband=0
@@ -112,7 +122,7 @@ ro.com.google.clientidbase.gmm=alps-full_h55_mt8163_60_n-{country}
 ro.num_md_protocol=2
 ro.mtk_besloudness_support=1
 ro.mtk_bt_support=1
-ro.mtk_wappush_support=1
+#ro.mtk_wappush_support=1
 ro.mtk_audio_tuning_tool_ver=V1
 ro.mtk_matv_analog_support=1
 ro.mtk_wlan_support=1
@@ -191,4 +201,7 @@ dalvik.vm.isa.arm64.features=default
 dalvik.vm.isa.arm.variant=cortex-a53
 dalvik.vm.isa.arm.features=default
 net.bt.name=Android
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+#import /custom/cip-build.prop
+#ro.expect.recovery_id=0xbd21f1c79c0714fe4313c100863f3861c94bc9ee000000000000000000000000
 

@@ -488,3 +488,12 @@ usr/keylayout/ACCDET.kl
 # Vendor's firmware data
 #vendor/firmware/DF_VERSION
 #vendor/firmware/bq27520.dffs
+
+# Other libraries not in aquaris m8 proprietary files
+vendor/lib/libsysenv.so
+lib/libfs_mgr.so
+lib64/libfs_mgr.so
+vendor/lib/libpqservice.so
+vendor/lib64/libpqservice.so
+vendor/lib/libmtkcam_fwkutils.so
+vendor/lib64/libmtkcam_fwkutils.so
