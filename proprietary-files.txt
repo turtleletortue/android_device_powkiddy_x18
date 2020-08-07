@@ -227,13 +227,13 @@ vendor/lib64/libril_dongle.so
 lib64/hw/audio.a2dp.default.so
 lib64/hw/audio_policy.stub.so
 vendor/lib64/hw/camera.mt8163.so
-/lib64/hw/gralloc.default.so
+lib64/hw/gralloc.default.so
 lib64/hw/keystore.default.so
 vendor/lib64/hw/hwcomposer.mt8163.so
 vendor/lib64/hw/gps.mt8163.so
 vendor/lib64/hw/audio.primary.mt8163.so
 lib64/hw/vibrator.default.so
-#vendor/lib64/hw/gralloc.mt8163.so
+vendor/lib64/hw/gralloc.mt8163.so
 vendor/lib64/hw/sensors.mt8163.so
 #lib64/hw/lights.mt8163.so
 lib64/hw/local_time.default.so
