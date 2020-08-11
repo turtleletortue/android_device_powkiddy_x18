@@ -25,8 +25,8 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := x18
 PRODUCT_NAME := lineage_x18
-PRODUCT_BRAND := alps
-PRODUCT_MANUFACTURER := alps
+PRODUCT_BRAND := google
+PRODUCT_MANUFACTURER := Powkiddy
 PRODUCT_MODEL := x18
 
 # Screen
