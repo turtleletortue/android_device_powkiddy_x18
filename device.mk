@@ -59,9 +59,15 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery/recovery.fstab:system/vendor/etc/re
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
-    $(LOCAL_PATH)/configs/audio_device.xml:system/etc/audio_device.xml \
-    $(LOCAL_PATH)/configs/audio_em.xml:system/etc/audio_em.xml \
-    $(LOCAL_PATH)/configs/AudioParamOptions.xml:system/etc/audio_param/AudioParamOptions.xml
+    $(LOCAL_PATH)/configs/audio_device.xml:system/vendor/etc/audio_device.xml \
+    $(LOCAL_PATH)/configs/audio_em.xml:system/vendor/etc/audio_em.xml \
+    $(LOCAL_PATH)/configs/AudioParamOptions.xml:system/vendor/etc/audio_param/AudioParamOptions.xml \
+    $(LOCAL_PATH)/configs/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml \
+    $(LOCAL_PATH)/configs/r_submix_audio_policy_configuration.xml:system/etc/r_submix_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
+    
+    
 
 # Wifi Configs
 PRODUCT_COPY_FILES += \
@@ -176,6 +182,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.allow.mock.location=1 \
     ro.debuggable=1 \
     persist.service.adb.enable=1
+
+#OTA Updates
+PRODUCT_PRODUCT_PROPERTIES += \
+    lineage.updater.uri=https://raw.githubusercontent.com/turtleletortue/android_lineage_custom_ota/cm-14.1/lineageos_x18.json
+
 
 # Verity 
 PRODUCT_SUPPORTS_BOOT_SIGNER := true
