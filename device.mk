@@ -185,7 +185,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 #OTA Updates
 PRODUCT_PRODUCT_PROPERTIES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/turtleletortue/android_lineage_custom_ota/cm-14.1/lineageos_x18.json
+    cm.updater.uri=https://raw.githubusercontent.com/turtleletortue/android_lineage_custom_ota/cm-14.1/lineageos_x18.json
 
 
 # Verity 
