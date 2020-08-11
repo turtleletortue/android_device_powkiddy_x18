@@ -169,12 +169,15 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # Shims
 TARGET_LDPRELOAD += libmtk_symbols.so
 
-#LINKER_FORCED_SHIM_LIBS := \
-#	/system/vendor/lib/libwvm.so|libshim_wvm.so \
+LINKER_FORCED_SHIM_LIBS := \
+    /system/vendor/lib/libcam_utils.so|libshim_ui.so \
+    /system/vendor/lib/libMtkOmxVenc.so|libshim_ui.so \
+    
+
 #	/system/lib/libui_ext.so|libshim_ui.so \
 #	/system/lib64/libui_ext.so|libshim_ui.so \
 #	/system/lib/libgui_ext.so|libshim_ui.so \
-#	/system/lib64/libgui_ext.so|libshim_ui.so
+#	/system/lib64/libgui_ext.so|libshim_ui.so \
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true

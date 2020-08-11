@@ -106,7 +106,8 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     libtinycompress \
     libtinyxml \
-    libaudioroute
+    libaudioroute \
+    audio.r_submix.mt8163
 
 # MISC
 PRODUCT_PACKAGES += \
@@ -115,7 +116,7 @@ PRODUCT_PACKAGES += \
     charger \
     libnl_2 \
     libion \
-    charger_res_images
+    charger_res_images 
 
 # FM Radio
 PRODUCT_PACKAGES += \

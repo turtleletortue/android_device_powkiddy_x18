@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/powkiddy/x18/device.mk)
 
 # Screen
-TARGET_SCREEN_HEIGHT := 720
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 # This is a tablet
 PRODUCT_CHARACTERISTICS := tablet

@@ -17,6 +17,9 @@ vendor/bin/nvram_daemon
 vendor/bin/mc6420d
 vendor/bin/lsm303md
 vendor/bin/wmt_loader
+vendor/bin/wmt_concurrency
+vendor/bin/wmt_launcher
+vendor/bin/wmt_loopback
 #bin/wpa_cli
 #bin/wpa_supplicant
 vendor/bin/chat
@@ -38,7 +41,7 @@ vendor/bin/akmd8975
 #bin/6620_wmt_lpbk
 vendor/bin/ami304d
 vendor/bin/gsm0710muxd
-#bin/wifi2agps
+vendor/bin/wifi2agps
 vendor/bin/memsicd
 vendor/bin/ccci_fsd
 vendor/bin/s62xd
@@ -235,7 +238,7 @@ vendor/lib64/hw/audio.primary.mt8163.so
 lib64/hw/vibrator.default.so
 vendor/lib64/hw/gralloc.mt8163.so
 vendor/lib64/hw/sensors.mt8163.so
-#lib64/hw/lights.mt8163.so
+vendor/lib64/hw/lights.mt8163.so
 lib64/hw/local_time.default.so
 lib64/hw/power.default.so
 vendor/lib64/hw/keystore.mt8163.so
@@ -464,7 +467,7 @@ lib/hw/vibrator.default.so
 vendor/lib/hw/gralloc.mt8163.so
 vendor/lib/hw/sensors.mt8163.so
 lib/hw/local_time.default.so
-#lib/hw/lights.mt8163.so
+vendor/lib/hw/lights.mt8163.so
 lib/hw/power.default.so
 vendor/lib/hw/keystore.mt8163.so
 
@@ -506,3 +509,6 @@ vendor/lib/libcam.hal3a.v3.dng.so
 vendor/lib64/libcam.hal3a.v3.dng.so
 vendor/lib/libaudiotoolkit.so
 vendor/lib64/libaudiotoolkit.so
+
+# libClearMotionFW.so
+vendor/lib/libClearMotionFW.so
