@@ -184,8 +184,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1
 
 #OTA Updates
-PRODUCT_PRODUCT_PROPERTIES += \
-    cm.updater.uri=https://raw.githubusercontent.com/turtleletortue/android_lineage_custom_ota/cm-14.1/lineageos_x18.json
+PRODUCT_PROPERTY_OVERRIDES += \
+    cm.updater.uri=https://raw.githubusercontent.com/turtleletortue/lineage_ota/cm-14.1/lineageos_x18.json
 
 
 # Verity 
