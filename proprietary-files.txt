@@ -512,3 +512,14 @@ vendor/lib64/libaudiotoolkit.so
 
 # libClearMotionFW.so
 vendor/lib/libClearMotionFW.so
+
+# Keystore/Encryption
+vendor/lib64/hw/keystore.mt8163.so
+vendor/lib/hw/keystore.mt8163.so
+vendor/lib64/hw/gatekeeper.mt8163.so
+vendor/lib/hw/gatekeeper.mt8163.so
+
+# Memtrack
+vendor/lib64/hw/memtrack.mt8163.so
+vendor/lib/hw/memtrack.mt8163.so
+

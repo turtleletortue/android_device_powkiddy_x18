@@ -1,0 +1,13 @@
+system/core/init/init.cpp
+
+Changed -
+
+        if (write_file("/sys/fs/selinux/checkreqprot", "0") == -1) {
+            security_failure();
+        }
+
+Became -
+
+        if (write_file("/sys/fs/selinux/checkreqprot", "0") == -1) {
+            //security_failure();
+        }
