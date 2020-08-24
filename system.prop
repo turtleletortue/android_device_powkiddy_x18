@@ -70,3 +70,8 @@ jro.jlink.ext_ap=1;
 
 # Screen rotation
 ro.sf.hwrotation=270
+
+# HDMI
+ro.mtk_hdmi_support=1
+ro.mtk_hdmi_hdcp_support=1
+ro.mtk_internal_hdmi_support=1
