@@ -89,14 +89,6 @@ PRODUCT_PACKAGES += \
     hostapd_cli \
     libwpa_client
 
-# IPv6 tethering
-PRODUCT_PACKAGES += \
-    ethertypes \
-    iptables \
-    ip6tables \
-    iptables-restore \
-    ip6tables-restore
-
 # Ramdisk
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/rootdir,root)
@@ -160,9 +152,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libGLES_android \
     libgralloc_extra \
-    libperfservicenative \
-    libui_ext \
-    libgui_ext 
+    libion
 
 # MTK Debugging
 PRODUCT_PACKAGES += \
@@ -190,8 +180,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 # Verity 
-PRODUCT_SUPPORTS_BOOT_SIGNER := true
-PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
+#PRODUCT_SUPPORTS_BOOT_SIGNER := true
+#PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
 
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)

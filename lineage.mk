@@ -1,11 +1,11 @@
 # Release name
 PRODUCT_RELEASE_NAME := x18
-CM_VENDOR := vendor/cm
+LINEAGE_VENDOR := vendor/lineage
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, $(CM_VENDOR)/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, $(LINEAGE_VENDOR)/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit device configuration
