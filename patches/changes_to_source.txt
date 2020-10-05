@@ -2,12 +2,14 @@ system/core/init/init.cpp
 
 Changed -
 
-        if (write_file("/sys/fs/selinux/checkreqprot", "0") == -1) {
+        if (!WriteFile("/sys/fs/selinux/checkreqprot", "0", &err)) {
+            LOG(ERROR) << err;
             security_failure();
         }
 
 Became -
 
-        if (write_file("/sys/fs/selinux/checkreqprot", "0") == -1) {
+        if (!WriteFile("/sys/fs/selinux/checkreqprot", "0", &err)) {
+            //LOG(ERROR) << err;
             //security_failure();
         }
