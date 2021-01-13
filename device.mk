@@ -113,7 +113,6 @@ PRODUCT_PACKAGES += \
     com.android.future.usb.accessory \
     charger \
     libnl_2 \
-    libion \
     charger_res_images 
 
 # FM Radio
@@ -152,7 +151,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libGLES_android \
     libgralloc_extra \
-    libion
+    libion \
+    libgui_ext \
+    libui_ext
 
 # MTK Debugging
 PRODUCT_PACKAGES += \
