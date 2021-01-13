@@ -37,7 +37,7 @@ TARGET_PREBUILT_KERNEL := device/powkiddy/x18/kernel
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 #BOARD_MTK_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE := "bootopt=64S3,32N2,64N2 androidboot.selinux=permissive"
-BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x05f88000 --second_offset 0x00f00000 --tags_offset 0x0df88000 --cmdline "bootopt=64S3,32N2,64N2" --board "vWC200103"
+BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x05f88000 --second_offset 0x00f00000 --tags_offset 0x0df88000 --cmdline "bootopt=64S3,32N2,64N2 androidboot.selinux=permissive" --board "vWC200103"
 #BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --cmdline $(BOARD_KERNEL_CMDLINE) --board "vWC200103"
 
 #Mediatek flags
