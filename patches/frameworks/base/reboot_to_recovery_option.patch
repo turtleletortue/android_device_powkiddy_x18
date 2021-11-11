@@ -1,0 +1,82 @@
+diff --git a/core/res/res/values/strings.xml b/core/res/res/values/strings.xml
+index d3df61ba..f38025d9 100755
+--- a/core/res/res/values/strings.xml
++++ b/core/res/res/values/strings.xml
+@@ -501,6 +501,9 @@
+     <!-- TODO: promote to separate string-->
+     <string name="global_action_restart" translatable="false">@string/sim_restart_button</string>
+ 
++    <!-- Label for restarting to recovery -->
++    <string name="global_action_restart_recovery" translatable="false">Reboot to recovery</string>
++
+     <!-- label for item that starts emergency call -->
+     <string name="global_action_emergency">Emergency</string>
+ 
+diff --git a/core/res/res/values/symbols.xml b/core/res/res/values/symbols.xml
+index eeacb084..dfc98912 100755
+--- a/core/res/res/values/symbols.xml
++++ b/core/res/res/values/symbols.xml
+@@ -1616,6 +1616,7 @@
+   <java-symbol type="string" name="global_action_power_off" />
+   <java-symbol type="string" name="global_action_reboot" />
+   <java-symbol type="string" name="global_action_restart" />
++  <java-symbol type="string" name="global_action_restart_recovery" />
+   <java-symbol type="string" name="global_actions_airplane_mode_off_status" />
+   <java-symbol type="string" name="global_actions_airplane_mode_on_status" />
+   <java-symbol type="string" name="global_actions_toggle_airplane_mode" />
+diff --git a/services/core/java/com/android/server/policy/GlobalActions.java b/services/core/java/com/android/server/policy/GlobalActions.java
+index 062d3009..e291fedd 100644
+--- a/services/core/java/com/android/server/policy/GlobalActions.java
++++ b/services/core/java/com/android/server/policy/GlobalActions.java
+@@ -58,6 +58,9 @@ import android.os.Bundle;
+ import android.os.Handler;
+ import android.os.IBinder;
+ import android.os.IPowerManager;
++// For Reboot to Recovery
++import android.os.PowerManager;
++//
+ import android.os.Message;
+ import android.os.Messenger;
+ import android.os.RemoteException;
+@@ -399,6 +402,7 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
+                 mItems.add(getAssistAction());
+             } else if (GLOBAL_ACTION_KEY_RESTART.equals(actionKey)) {
+                 mItems.add(new RestartAction());
++                mItems.add(new RestartRecoveryAction());
+             } else {
+                 Log.e(TAG, "Invalid global action key " + actionKey);
+             }
+@@ -512,6 +516,33 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
+         }
+     }
+ 
++    private final class RestartRecoveryAction extends SinglePressAction implements LongPressAction {
++        private RestartRecoveryAction() {
++            super(R.drawable.ic_restart, R.string.global_action_restart_recovery);
++        }
++
++        @Override
++        public boolean onLongPress() {
++            return false;
++        }
++
++        @Override
++        public boolean showDuringKeyguard() {
++            return true;
++        }
++
++        @Override
++        public boolean showBeforeProvisioning() {
++            return true;
++        }
++
++        @Override
++        public void onPress() {
++            PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
++            pm.reboot(PowerManager.REBOOT_RECOVERY);
++        }
++    }
++
+     private final class ScreenshotAction extends SinglePressAction implements LongPressAction {
+ 
+         private ScreenshotAction() {
