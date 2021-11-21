@@ -59,7 +59,7 @@ ro.boot.selinux=disable
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
 
-ro.sf.lcd_density=213
+ro.sf.lcd_density=253
 
 # disable ipo for development
 sys.ipo.disable=1
