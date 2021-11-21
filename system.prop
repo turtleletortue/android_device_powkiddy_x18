@@ -70,3 +70,7 @@ jro.jlink.ext_ap=1;
 
 # Screen rotation
 ro.sf.hwrotation=270
+
+# Fix kisd
+ro.mtk_key_manager_kb_path=1
+
