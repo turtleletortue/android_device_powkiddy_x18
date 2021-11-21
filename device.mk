@@ -140,7 +140,8 @@ PRODUCT_PACKAGES += \
     libmtk_symbols \
     libshim_ui \
     libshim_wvm \
-    libshim_drm
+    libshim_drm \
+    libshim_log
 
 # Default.prop
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

@@ -167,11 +167,14 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 #BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Shims
-TARGET_LDPRELOAD += libmtk_symbols.so
+TARGET_LDPRELOAD += \
+    libmtk_symbols.so 
 
 LINKER_FORCED_SHIM_LIBS := \
     /system/vendor/lib/libcam_utils.so|libshim_ui.so \
     /system/vendor/lib/libMtkOmxVenc.so|libshim_ui.so \
+    /system/vendor/bin/wmt_loader|libshim_log.so \
+    /system/vendor/bin/wmt_launcher|libshim_log.so
     
 
 #	/system/lib/libui_ext.so|libshim_ui.so \
